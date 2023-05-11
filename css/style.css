@@ -21,6 +21,8 @@ li:last-child {margin-bottom: 0;}
   |============================
 */
 :root {
+  scroll-behavior: smooth;
+
 	--iris: #4d5ae5;
 	--ocean: #404bbf;
 	--navy-blue: #2e2f42;
@@ -712,7 +714,14 @@ position: absolute;
 right: 0;
 top: 0;
 width: 165px;
-height: 40px;
+min-height: 40px;
+border: none;
+
+transition: background-color var(--anim-properties);
+}
+
+.subscribe-btn:hover, .subscribe-btn:focus{
+background-color: var(--ocean);
 }
 
 .sender-icon{
@@ -722,7 +731,7 @@ fill: var(--white);
 .subscribe-text{
 width: 77px;
 min-height: 24px;
-font-weight: 500;
+font-weight:  medium;
 font-size: 16px;
 line-height: 1.5;
 display: flex;
@@ -743,6 +752,7 @@ background-color: var(--navy-blue);
 width: 264px;
 min-height: 40px;
 color: var(--white);
+outline: none;
 }
 
 ::placeholder{
@@ -823,7 +833,7 @@ cursor: pointer;
 transition: background-color var(--anim-properties);
 }
 
-.modal-icon {
+.modal-close-icon {
 display: block;
 margin: 0 auto;
 fill: var(--navy-blue);
@@ -833,9 +843,39 @@ transition: fill var(--anim-properties);
 .modal-button:hover, .modal-button:focus {
 background-color: var(--ocean);
 }
-.modal-button:hover > .modal-icon {
+.modal-button:hover > .modal-close-icon {
   fill: var(--white);
 }
-.modal-button:focus > .modal-icon{
+.modal-button:focus > .modal-close-icon {
    fill: var(--white);
+}
+
+/* Send button */
+
+.modal-send-btn{
+/* display: flex;
+align-items: center; */
+padding: 16px 32px;
+width: 169px;
+min-height: 56px;
+background: var(--iris);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+border: none;
+}
+
+.modal-send-txt{
+width: 105px;
+min-height: 24px;
+font-weight: medium;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: var(--white);
+}
+
+/* Moadl forms */
+.modal-form{
+display: flex;
+flex-direction: column;
 }
