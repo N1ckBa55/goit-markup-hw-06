@@ -838,6 +838,10 @@ letter-spacing: 0.04em;
 color: var(--white);
 }
 
+.modal-send-btn:hover, .modal-send-btn:hover {
+background-color: var(--ocean);
+}
+
 
 /* Moadl forms */
 .modal-form{
