@@ -857,7 +857,7 @@ border-radius: 4px;
 resize: none;
 outline-offset: -1px;
 outline: 1px solid transparent;
-transition: outline var(--anim-properties), fill var(--anim-properties);
+transition: border-color var(--anim-properties);
 padding: 0 38px;
 outline: none;
 }
@@ -868,7 +868,6 @@ min-height: 120px;
 border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
 resize: none;
-outline-offset: -1px;
 outline: 1px solid transparent;
 transition: border-color var(--anim-properties);
 padding: 8px 16px;
@@ -1000,6 +999,7 @@ top:50%;
 left:16px;
 transform: translateY(-50%);
 pointer-events: none;
+transition: fill var(--anim-properties);
 }
 
 .privacy-link {
